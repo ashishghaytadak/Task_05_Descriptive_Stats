@@ -215,10 +215,14 @@ if lever and qualifying:
             p["shots_per_game"] = p["sh"] / p["gp"] if p["gp"] else 0
             p["shoot_pct"] = p["g"] / p["sh"] if p["sh"] else 0.0
 
-        # Shots/game: top quartile threshold (75th percentile)
+        # Shots/game: top quartile threshold (75th percentile, linear interpolation)
         spg_sorted = sorted([p["shots_per_game"] for p in qualifying])
-        q75_idx = int(len(spg_sorted) * 0.75)
-        spg_top_quartile_threshold = spg_sorted[q75_idx]
+        n = len(spg_sorted)
+        # Use linear interpolation for P75 (matches numpy's default method)
+        pos = 0.75 * (n - 1)
+        lo, hi = int(pos), min(int(pos) + 1, n - 1)
+        frac = pos - lo
+        spg_top_quartile_threshold = spg_sorted[lo] + frac * (spg_sorted[hi] - spg_sorted[lo])
 
         # Shooting %: median
         sp_sorted = sorted([p["shoot_pct"] for p in qualifying])
