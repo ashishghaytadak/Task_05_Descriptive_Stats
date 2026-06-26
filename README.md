@@ -13,8 +13,8 @@ ground truth.
 
 ## The dataset
 
-- **Source:** Syracuse University Women's Lacrosse — <SEASON> cumulative statistics,
-  https://cuse.com/sports/womens-lacrosse/stats/<SEASON>
+- **Source:** Syracuse University Women's Lacrosse — 2025 cumulative statistics,
+  https://cuse.com/sports/womens-lacrosse/stats/2025
 - **What it is:** TODO — one season of team stats. Two tables captured as CSVs:
   - `players.csv` — per-player totals (GP, G, A, Pts, Sh, SOG, GB, DC, CT, TO).
   - `games.csv` — per-game results (date, opponent, SU score, opp score, W/L).
