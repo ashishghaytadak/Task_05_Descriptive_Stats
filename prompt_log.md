@@ -96,7 +96,7 @@ Verdict key: ✅ correct · ⚠️ partially correct / right number wrong reason
 Convert each rate to a z-score across qualifying players, then: GameChanger = (z_offense + z_possession + z_disruption) / 3. The three pillars are equally weighted.
 Using this exact definition, compute the Game Changer score for every qualifying player and rank them. Show the per-game rates and z-scores."
 - **Response:** Claude 4.8 Opus correctly calculated the scores using a population standard deviation. Top 4: Guzik 1.87, Lahah 0.50, Muchnick 0.26, Trinkaus 0.25.
-- **Did it apply your definition faithfully or drift to its own?** Yes, it passed the Lahah drift test flawlessly. Izzy Lahah is a defensive specialist (52 GB, 31 CT, barely scores), yet the model correctly identified her as #2 strictly by applying the math for disruption z-score. It did not drift back into a points-based ranking.
+- **Did it apply your definition faithfully or drift to its own?** Yes, it passed the Lahah drift test flawlessly. Izzy Lahah is a defensive specialist (52 GB, 57 CT, barely scores), yet the model correctly identified her as #2 strictly by applying the math for disruption z-score. It did not drift back into a points-based ranking.
 - **Your independent recomputation:** Matches perfectly.
 - **Verdict:** ✅ correct. 
 
