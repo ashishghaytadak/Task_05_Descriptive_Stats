@@ -1,0 +1,12 @@
+# Data must not be committed (per the assignment) — link to the source instead.
+data/
+*.csv
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Local notes / scratch
+*.json
+.DS_Store
