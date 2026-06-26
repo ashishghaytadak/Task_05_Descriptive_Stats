@@ -13,10 +13,10 @@ ground truth.
 
 ## The dataset
 
-- **Source:** Syracuse University Women's Lacrosse — 2025 cumulative statistics,
-  https://cuse.com/sports/womens-lacrosse/stats/2025
+- **Source:** Syracuse University Women's Lacrosse — 2026 cumulative statistics,
+  https://cuse.com/sports/womens-lacrosse/stats/2026
 - **What it is:** TODO — one season of team stats. Two tables captured as CSVs:
-  - `players.csv` — per-player totals (GP, G, A, Pts, Sh, SOG, GB, DC, CT, TO).
+  - `players.csv` — per-player totals (GP, G, A, PTS, SH, GW, GB, DC, TO, CT, FOULS).
   - `games.csv` — per-game results (date, opponent, SU score, opp score, W/L).
 - **Size:** TODO — N players, M games.
 - **Quirks / quality notes:** TODO — e.g. a "TEAM" row, totals row, blank cells,
@@ -68,6 +68,8 @@ you trust an LLM with real analytical work, and where would you insist on checki
 | File | Purpose |
 |---|---|
 | `prompt_log.md` | Ordered log of every prompt, response, and verdict. |
+| `METRICS.md` | Formal definitions of Game Changer, Lever, and development-pick metrics. |
+| `metrics.py` | Standalone script that computes all metrics from the CSVs. |
 | `pure_python_stats.py`, `pandas_stats.py`, `polars_stats.py` | Ground-truth scripts (reused). |
 | `requirements.txt` | Dependencies. |
 | `figures/` | Any visualizations the model produced (clearly named). |
