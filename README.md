@@ -94,6 +94,7 @@ Full formal definitions are in [`METRICS.md`](METRICS.md). Summary:
 | `prompt_log.md` | Ordered log of every prompt, response, and verdict. |
 | `METRICS.md` | Formal definitions of Game Changer, Lever, and development-pick metrics. |
 | `metrics.py` | Standalone script that computes all metrics from the CSVs. |
+| `ground_truth.py` | Script used to verify the Phase A factual baseline answers. |
 | `pure_python_stats.py`, `pandas_stats.py`, `polars_stats.py` | Ground-truth scripts (reused). |
 | `requirements.txt` | Dependencies. |
 | `figures/` | Any visualizations the model produced (clearly named). |
