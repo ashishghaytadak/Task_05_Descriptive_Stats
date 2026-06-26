@@ -224,8 +224,8 @@ if lever and qualifying:
         frac = pos - lo
         spg_top_quartile_threshold = spg_sorted[lo] + frac * (spg_sorted[hi] - spg_sorted[lo])
 
-        # Shooting %: median
-        sp_sorted = sorted([p["shoot_pct"] for p in qualifying])
+        # Shooting %: median (only for players who took at least one shot)
+        sp_sorted = sorted([p["shoot_pct"] for p in qualifying if p["sh"] > 0])
         mid = len(sp_sorted) // 2
         if len(sp_sorted) % 2 == 0:
             shoot_median = (sp_sorted[mid - 1] + sp_sorted[mid]) / 2

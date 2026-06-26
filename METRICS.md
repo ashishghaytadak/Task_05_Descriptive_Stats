@@ -107,7 +107,7 @@ profile suggests the highest marginal return from targeted development.
    GameChanger score).
 2. Among them, find the player whose **shots per game** (SH / GP) is in the
    **top quartile** of the full qualifying roster, but whose **shooting
-   percentage** (G / SH) is **below the roster median**.
+   percentage** (G / SH) is **below the roster median** (calculate this median only across qualifying players who have taken at least one shot, `SH > 0`).
 
    This targets a player who *gets enough shots* (volume is already there) but
    *converts at a below-average rate* — the classic "if she just finished
